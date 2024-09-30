@@ -1,0 +1,85 @@
+body {
+  /*
+    ** Remove or set this to transparent for default macos frosted glass look.
+    ** You may also adjust this color to anything you like. Even make it opaque.
+    */
+  background-color: rgba(135, 91, 204, 0.3);
+}
+
+#browser,
+#navigator-toolbox,
+#sidebar-main,
+#tabbrowser-tabpanels {
+
+  &,
+  &>* {
+    appearance: -moz-sidebar !important;
+  }
+}
+
+#tabbrowser-tabs[orient="vertical"]:has(> #tabbrowser-arrowscrollbox[overflowing="true"]) {
+  border-bottom: none !important;
+  margin-bottom: 10px !important;
+}
+
+#browser {
+  padding: 6px 10px 10px 10px;
+}
+
+#navigator-toolbox {
+  padding-top: 8px;
+  border: 0 !important;
+}
+
+#TabsToolbar {
+  --toolbarbutton-inner-padding: 0 !important;
+  min-height: 0 !important;
+}
+
+#TabsToolbar .titlebar-spacer {
+  display: none !important;
+}
+
+#TabsToolbar .toolbar-items {
+  display: none !important;
+}
+
+#TabsToolbar .titlebar-buttonbox-container {
+  transform: translateY(21px);
+  height: 0;
+}
+
+#nav-bar-customization-target {
+  padding-left: 65px;
+}
+
+.browserContainer browser {
+  border-radius: 10px !important;
+  box-shadow: 0px 0 6px 1px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+#sidebar-box {
+  border-radius: 10px !important;
+}
+
+browser#sidebar {
+  border-radius: 0 0 10px 10px;
+}
+
+#sidebar,
+.sidebar-panel {
+  background: transparent !important;
+}
+
+#sidebar-splitter {
+  width: 13px !important;
+  border: 0 !important;
+}
+
+/* Firefox's new vertical tabs stuff */
+#sidebar-main {
+  tab.tabbrowser-tab>stack {
+    font-size: 1.2rem;
+  }
+}
