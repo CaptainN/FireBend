@@ -3,7 +3,10 @@ body {
     ** Remove or set this to transparent for default macos frosted glass look.
     ** You may also adjust this color to anything you like. Even make it opaque.
     */
-  background-color: rgba(135, 91, 204, 0.3);
+  /* A heavy tint of purple (original screenshot from reddit) */
+  /* background-color: rgba(135, 91, 204, 0.3); */
+  /* A color more compatible with the rest of Firefox's dark gray theme */
+  background-color: rgba(46, 41, 102, 0.2);
 }
 
 #browser,
