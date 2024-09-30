@@ -86,3 +86,13 @@ browser#sidebar {
     font-size: 1.2rem;
   }
 }
+
+findbar {
+  background: transparent !important;
+  border: 0 !important;
+  padding-block: 10px !important;
+
+  &:last-child {
+    padding-block-end: 0 !important;
+  }
+}
