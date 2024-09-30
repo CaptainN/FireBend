@@ -19,21 +19,22 @@ It does borrow heavily from Arc. Specifically, it adds rounded corners, and a 10
 Anyway, here's the rough outline of how to set it up:
 
 1. Edit some settings in about:config.
-  - set sidebar.revamp to true
-  - set sidebar.verticalTabs to true
-  - set toolkit.legacyUserProfileCustomizations.stylesheets to true
+    - set sidebar.revamp to true
+    - set sidebar.verticalTabs to true
+    - set toolkit.legacyUserProfileCustomizations.stylesheets to true
 2. Add userChrome.css from this repo to your profile directory.
-  - There is much more [robust instructions here](https://www.userchrome.org/how-create-userchrome-css.html).
-  - Find the correct version from the folders in this repo, macos or windows.
-  - Use about:support to find the "Profile Folder" and open that (there is a button on that page)
-  - Add a folder called "chrome" to your active profile folder, then copy userChrome.css to that folder.
+    - There is much more [robust instructions here](https://www.userchrome.org/how-create-userchrome-css.html).
+    - Find the correct version from the folders in this repo, macos or windows.
+    - Use about:support to find the "Profile Folder" and open that (there is a button on that page)
+    - Add a folder called "chrome" to your active profile folder, then copy userChrome.css to that folder.
 3. Manually re-arrange some things in "Customize Toolbar..."
-  - I just moved things around in the toolbar, to get it to look nicer. Moved the spacer between reload and the location bar to the left of the back button. Move the "Show Sidebars" button to the left of that spacer. That's it!
+    - I just moved things around in the toolbar, to get it to look nicer. Moved the spacer between reload and the location bar to the left of the back button. Move the "Show Sidebars" button to the left of that spacer.
+    - (Optional) On Windows, remove the spacer on the right side of the location bar. It moves the main menu away from the min/max/close buttons, which aren't aligned, and just looks weird if they are too close.
 3. (optional) Add userChrome.js and the scripts from this repo. This is only necessary to get the transparency effect behind the sidebar, but that comes with some other useful features, which I'll describe below.
-  - Follow the instructions in [the userChrome.js repo](https://github.com/xiaoxiaoflood/firefox-scripts) (it's a little tricky).
-  - After doing that, add the firebend.uc.js file from this repo to your profile's chrome directory.
+    - Follow the instructions in [the userChrome.js repo](https://github.com/xiaoxiaoflood/firefox-scripts) (it's a little tricky).
+    - After doing that, add the firebend.uc.js file from this repo to your profile's chrome directory.
 
 Future:
 - More specific instructions - for now, I just wanted to get something up on github.
 - I'd like to get some options built in to the stylesheet for things like background color, and other variations.
-- Support for Windows and Linux. I did this initial work on my macos workstation, and some of the styles are very specific to that operating system. But it shouldn't be a lot of work to make a Windows and GTK version.
+- Support for Linux. I did this initial work on my macos workstation, and some of the styles are very specific to that operating system. I also did a quick version on Windows - I'm sure there are lots of missing screens and features in both. It shouldn't be a lot of work to make a GTK version.

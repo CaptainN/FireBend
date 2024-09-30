@@ -16,41 +16,52 @@ body {
     appearance: -moz-sidebar !important;
   }
 }
-
+/*
 #tabbrowser-tabs[orient="vertical"]:has(> #tabbrowser-arrowscrollbox[overflowing="true"]) {
   border-bottom: none !important;
   margin-bottom: 10px !important;
 }
-
+*/
 #browser {
   padding: 6px 10px 10px 10px;
 }
 
 #navigator-toolbox {
   padding-top: 8px;
-  border: 0 !important;
+  background: transparent !important;
+  border-bottom: 0 !important;
+  & vbox#titlebar {
+    position: relative;
+    z-index: 4;
+  }
+  & toolbar#nav-bar {
+    position: relative;
+    z-index: 3;
+  }
 }
-
+/*
 #TabsToolbar {
   --toolbarbutton-inner-padding: 0 !important;
   min-height: 0 !important;
 }
-
-#TabsToolbar .titlebar-spacer {
-  display: none !important;
-}
-
+*/
+#TabsToolbar .titlebar-spacer,
 #TabsToolbar .toolbar-items {
   display: none !important;
 }
 
 #TabsToolbar .titlebar-buttonbox-container {
-  transform: translateY(21px);
-  height: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  transform: translateY(-9px);
 }
 
-#nav-bar-customization-target {
-  padding-left: 65px;
+toolbar#nav-bar {
+  border-top: 0 !important;
+  padding-right: 130px !important;
+  background: transparent !important;
+  margin-right: 50px;
 }
 
 .browserContainer browser {
