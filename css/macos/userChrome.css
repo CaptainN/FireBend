@@ -91,8 +91,11 @@ findbar {
   background: transparent !important;
   border: 0 !important;
   padding-block: 10px !important;
+  padding-block-end: 0 !important;
+}
 
-  &:last-child {
-    padding-block-end: 0 !important;
-  }
+.devtools-horizontal-splitter {
+  height: 10px !important;
+  background: transparent !important;
+  margin: 0 !important;
 }
