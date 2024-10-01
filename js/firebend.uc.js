@@ -19,6 +19,7 @@ UC.firebend = {
           console.log("Wrapper found and styled");
           wrapper.style.background = "transparent";
           wrapper.style.border = "none";
+          wrapper.style.padding = "0";
           obs.disconnect(); // Stop observing once element is found and styled
         }
       }
