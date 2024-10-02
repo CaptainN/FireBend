@@ -6,6 +6,19 @@ body {
   background-color: rgba(135, 91, 204, 0.3);
 }
 
+/* Just for giggles, a TV snow like effect - uncomment to use
+body::before {
+  content: "";
+  background-image: url(https://i.sstatic.net/sIIwU.gif);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+}
+*/
+
 #browser,
 #navigator-toolbox,
 #sidebar-main,
@@ -16,6 +29,7 @@ body {
     appearance: -moz-sidebar !important;
   }
 }
+
 /*
 #tabbrowser-tabs[orient="vertical"]:has(> #tabbrowser-arrowscrollbox[overflowing="true"]) {
   border-bottom: none !important;
@@ -30,15 +44,18 @@ body {
   padding-top: 8px;
   background: transparent !important;
   border-bottom: 0 !important;
+
   & vbox#titlebar {
     position: relative;
     z-index: 4;
   }
+
   & toolbar#nav-bar {
     position: relative;
     z-index: 3;
   }
 }
+
 /*
 #TabsToolbar {
   --toolbarbutton-inner-padding: 0 !important;

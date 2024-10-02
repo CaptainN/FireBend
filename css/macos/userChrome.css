@@ -9,6 +9,19 @@ body {
   background-color: rgba(46, 41, 102, 0.2);
 }
 
+/* Just for giggles, a TV snow like effect - uncomment to use
+body::before {
+  content: "";
+  background-image: url(https://i.sstatic.net/sIIwU.gif);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.1;
+}
+*/
+
 #browser,
 #navigator-toolbox,
 #sidebar-main,
