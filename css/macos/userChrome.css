@@ -112,3 +112,19 @@ findbar {
   background: transparent !important;
   margin: 0 !important;
 }
+
+.sidebar-splitter.shopping-sidebar-splitter {
+  width: 10px !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-inline-width: 0 !important;
+  margin-inline-start: 0 !important;
+}
+
+shopping-sidebar {
+  border-inline-start: 0 !important;
+
+  & browser.shopping-sidebar {
+    border-radius: 10px !important;
+  }
+}
