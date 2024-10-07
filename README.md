@@ -12,7 +12,7 @@ I'm not quite aiming for Arc - so what's another way to say "an arc"? How about 
 
 Here is what I've acheived on macos:
 
-![Screenshot of FireBent Firefox](https://github.com/CaptainN/FireBend/blob/main/assets/screenshot.webp?raw=true)
+![Screenshot of FireBent Firefox](https://github.com/CaptainN/FireBend/blob/main/assets/screenshot2.png?raw=true)
 
 It does borrow heavily from Arc. Specifically, it adds rounded corners, and a 10 pixel gutter between elements, and prefers side bar vertical tabs. But that's really it as far as similarities. Everything else in that screenshot is just Firefox! There are even parts of that which I prefer over Arc. I don't actually like the side bar location field - and on Windows, Arc doesn't even do that.
 
