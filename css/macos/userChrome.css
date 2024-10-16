@@ -88,8 +88,8 @@ sidebar-main,
 }
 
 .wrapper:has(.tools-and-extensions) {
-  border: none;
-  padding: 0;
+  border: none !important;
+  padding-left: 0 !important;
 }
 
 findbar {
