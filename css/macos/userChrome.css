@@ -1,26 +1,7 @@
 body {
-  /*
-    ** Remove or set this to transparent for default macos frosted glass look.
-    ** You may also adjust this color to anything you like. Even make it opaque.
-    */
-  /* A heavy tint of purple (original screenshot from reddit) */
-  /* background-color: rgba(135, 91, 204, 0.3); */
-  /* A color more compatible with the rest of Firefox's dark gray theme */
-  background-color: rgba(46, 41, 102, 0.2);
+  /* This is var(--toolbar-bgcolor); with opacity */
+  background-color: rgba(43, 42, 51, .5);
 }
-
-/* Just for giggles, a TV snow like effect - uncomment to use
-body::before {
-  content: "";
-  background-image: url(https://i.sstatic.net/sIIwU.gif);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0.1;
-}
-*/
 
 #browser,
 #navigator-toolbox,
@@ -100,6 +81,17 @@ browser#sidebar {
   }
 }
 
+#sidebar-main,
+sidebar-main,
+.wrapper:has(.tools-and-extensions) {
+  background: transparent !important;
+}
+
+.wrapper:has(.tools-and-extensions) {
+  border: none;
+  padding: 0;
+}
+
 findbar {
   background: transparent !important;
   border: 0 !important;
@@ -127,4 +119,10 @@ shopping-sidebar {
   & browser.shopping-sidebar {
     border-radius: 10px !important;
   }
+}
+
+/* Horizontal Tabs (for upcoming 133) */
+.tab-background {
+  border-radius: var(--tab-border-radius) var(--tab-border-radius) 0 0;
+  margin-block: var(--tab-block-margin) 0;
 }
