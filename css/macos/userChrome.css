@@ -19,6 +19,12 @@ body {
   margin-bottom: 10px !important;
 }
 
+#tabbrowser-tabbox {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+    outline: none !important;
+  }
+}
+
 #browser {
   padding: 6px 10px 10px 10px;
 }
