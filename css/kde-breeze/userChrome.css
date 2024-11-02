@@ -18,6 +18,12 @@
     }
   }
 
+  #tabbrowser-tabbox {
+    @media (-moz-bool-pref: "sidebar.revamp") {
+      outline: none !important;
+    }
+  }
+
   #browser {
     padding: 8px 10px 10px 10px;
     background-color: var(--fb-bg-active) !important;
@@ -43,6 +49,7 @@
   /* This is to shorten #title-bar, and get the close button in position */
   #navigator-toolbox {
     padding-top: 8px;
+    border-bottom: 0 !important;
     & #TabsToolbar {
       position: absolute;
       height: 20px;
