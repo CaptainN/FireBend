@@ -82,6 +82,10 @@ browser#sidebar {
 
 /* Firefox's new vertical tabs stuff */
 #sidebar-main {
+  &:not([hidden]) {
+    margin-left: -10px;
+  }
+
   tab.tabbrowser-tab>stack {
     font-size: 1.2rem;
   }
