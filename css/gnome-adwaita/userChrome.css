@@ -1,65 +1,79 @@
 :root {
-    --fb-bg-active: light-dark(rgba(251, 251, 251, .95), rgba(43, 42, 51, .95));
-    --fb-bg-inactive: light-dark(rgb(242, 242, 242), rgb(43, 42, 51));
+  --fb-bg-active: light-dark(rgba(251, 251, 251, .95), rgba(43, 42, 51, .95));
+  --fb-bg-inactive: light-dark(rgb(242, 242, 242), rgb(43, 42, 51));
+}
+
+#navigator-toolbox {
+  background-color: var(--fb-bg-active) !important;
+  border-bottom: 0 !important;
+  &:-moz-window-inactive {
+    background-color: var(--fb-bg-inactive) !important;
   }
-  
-  #navigator-toolbox {
-    background-color: var(--fb-bg-active) !important;
-    &:-moz-window-inactive {
-      background-color: var(--fb-bg-inactive) !important;
-    }
-  }
-  #TabsToolbar, #toolbar-menubar, #main-menubar, #titlebar {
+}
+#TabsToolbar, #toolbar-menubar, #main-menubar, #titlebar {
+  background-color: transparent !important;
+}
+.browser-toolbar {
+  &:not(.titlebar-color) {
     background-color: transparent !important;
   }
-  .browser-toolbar {
-    &:not(.titlebar-color) {
-      background-color: transparent !important;
+}
+
+#tabbrowser-tabbox {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+    outline: none !important;
+  }
+}
+
+#browser {
+  padding: 8px 10px 10px 10px;
+  background-color: var(--fb-bg-active) !important;
+  &:-moz-window-inactive {
+    background-color: var(--fb-bg-inactive) !important;
+  }
+}
+
+#sidebar-main, 
+sidebar-main, 
+.wrapper:has(.tools-and-extensions) {
+  background: transparent !important;
+}
+
+#appcontent {
+  overflow: hidden !important;
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border-inline-start: none !important;
+  border-top: 0 !important;
+}
+
+/* This is to shorten #title-bar, and get the close button in position */
+#navigator-toolbox {
+  padding-top: 8px;
+  & #TabsToolbar {
+    position: absolute;
+    height: 20px;
+    left: 0;
+    right: 0;
+    & .toolbar-items {
+      display: none;
     }
+    & .titlebar-buttonbox-container {
+      position: absolute;
+      z-index: 400;
+      top: 5px;
+      right: 0px;
+      }
   }
-  
-  #browser {
-    padding: 8px 10px 10px 10px;
-    background-color: var(--fb-bg-active) !important;
-    &:-moz-window-inactive {
-      background-color: var(--fb-bg-inactive) !important;
-    }
-  }
-  
-  #sidebar-main, 
-  sidebar-main, 
-  .wrapper:has(.tools-and-extensions) {
-    background: transparent !important;
-  }
-  
-  #appcontent {
-    overflow: hidden !important;
-    border-top-left-radius: 10px !important;
-    border-top-right-radius: 10px !important;
-    border-inline-start: none !important;
+  & #nav-bar {
+    margin-right: 30px;
     border-top: 0 !important;
   }
-  
-  /* This is to shorten #title-bar, and get the close button in position */
-  #navigator-toolbox {
-    padding-top: 8px;
-    & #TabsToolbar {
-      position: absolute;
-      height: 20px;
-      left: 0;
-      right: 0;
-      & .toolbar-items {
-        display: none;
-      }
-      & .titlebar-buttonbox-container {
-        position: absolute;
-        z-index: 400;
-        top: 5px;
-        right: 0px;
-        }
-    }
-    & #nav-bar {
-      margin-right: 30px;
-    }
-  }
-  
+}
+
+.private-browsing-indicator-icon {
+  transform: translate(7px, 9px);
+}
+.private-browsing-indicator-label {
+  display: none !important;
+}
