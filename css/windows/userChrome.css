@@ -1,144 +1,81 @@
-body {
-  /*
-    ** Remove or set this to transparent for default macos frosted glass look.
-    ** You may also adjust this color to anything you like. Even make it opaque.
-    */
-  /* A heavy tint of purple (original screenshot from reddit) */
-  /* background-color: rgba(135, 91, 204, 0.3); */
-  /* A color more compatible with the rest of Firefox's dark gray theme */
-  background-color: rgba(46, 41, 102, 0.2);
-}
-
-#browser,
-#navigator-toolbox,
-#sidebar-main,
-#tabbrowser-tabpanels {
-
-  &,
-  &>* {
-    appearance: -moz-sidebar !important;
-  }
-}
-
-/*
-#tabbrowser-tabs[orient="vertical"]:has(> #tabbrowser-arrowscrollbox[overflowing="true"]) {
-  border-bottom: none !important;
-  margin-bottom: 10px !important;
-}
-*/
-#browser {
-  padding: 6px 10px 10px 10px;
+:root {
+  --fb-bg-active: light-dark(rgba(251, 251, 251, .95), rgba(43, 42, 51, .95));
+  --fb-bg-inactive: light-dark(rgb(242, 242, 242), rgb(43, 42, 51));
 }
 
 #navigator-toolbox {
-  padding-top: 8px;
-  background: transparent !important;
+  background-color: var(--fb-bg-active) !important;
   border-bottom: 0 !important;
-
-  & vbox#titlebar {
-    position: relative;
-    z-index: 4;
-  }
-
-  & toolbar#nav-bar {
-    position: relative;
-    z-index: 3;
+  &:-moz-window-inactive {
+    background-color: var(--fb-bg-inactive) !important;
   }
 }
-
-/*
-#TabsToolbar {
-  --toolbarbutton-inner-padding: 0 !important;
-  min-height: 0 !important;
+#TabsToolbar, #toolbar-menubar, #main-menubar, #titlebar {
+  background-color: transparent !important;
 }
-*/
-#TabsToolbar .titlebar-spacer,
-#TabsToolbar .toolbar-items {
-  display: none !important;
-}
-
-#TabsToolbar .titlebar-buttonbox-container {
-  right: 0;
-  position: absolute;
-  top: 0;
-  transform: translateY(-9px);
-}
-
-toolbar#nav-bar {
-  border-top: 0 !important;
-  padding-right: 130px !important;
-  background: transparent !important;
-  margin-right: 50px;
-}
-
-.browserContainer browser {
-  border-radius: 10px !important;
-  box-shadow: 0px 0 6px 1px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(0, 0, 0, 0.25);
-}
-
-#sidebar-box, #appcontent, #tabbrowser-tabbox, #tabbrowser-tabpanels {
-  border-radius: 10px !important;
-}
-
-browser#sidebar {
-  border-radius: 0 0 10px 10px;
-}
-
-#sidebar,
-.sidebar-panel {
-  background: transparent !important;
-}
-
-#sidebar-splitter {
-  width: 13px !important;
-  border: 0 !important;
-}
-
-/* Firefox's new vertical tabs stuff */
-#sidebar-main {
-  tab.tabbrowser-tab>stack {
-    font-size: 1.2rem;
+.browser-toolbar {
+  &:not(.titlebar-color) {
+    background-color: transparent !important;
   }
 }
 
-findbar {
-  background: transparent !important;
-  border: 0 !important;
-  padding-block: 10px !important;
-  padding-block-end: 0 !important;
-}
-
-.devtools-horizontal-splitter {
-  height: 10px !important;
-  background: transparent !important;
-  margin: 0 !important;
-}
-
-.sidebar-splitter.shopping-sidebar-splitter {
-  width: 10px !important;
-  margin: 0 !important;
-  border: 0 !important;
-  border-inline-width: 0 !important;
-  margin-inline-start: 0 !important;
-}
-
-shopping-sidebar {
-  border-inline-start: 0 !important;
-
-  & browser.shopping-sidebar {
-    border-radius: 10px !important;
+#tabbrowser-tabbox {
+  @media (-moz-bool-pref: "sidebar.revamp") {
+    outline: none !important;
   }
 }
 
-#tabbrowser-tabpanels {
+#browser {
+  padding: 8px 10px 10px 10px;
+  background-color: var(--fb-bg-active) !important;
+  &:-moz-window-inactive {
+    background-color: var(--fb-bg-inactive) !important;
+  }
+}
+
+#sidebar-main, 
+sidebar-main, 
+.wrapper:has(.tools-and-extensions) {
   background: transparent !important;
 }
 
 #appcontent {
-  @media (-moz-bool-pref: "sidebar.revamp") {
-    border-top: none !important;
-    border-inline-start: none !important;
-    box-shadow: none !important;
+  overflow: hidden !important;
+  border-inline-start: none !important;
+  border-top: 0 !important;
+}
+
+.browserStack browser {
+  border-radius: 10px !important;
+}
+
+/* This is to shorten #title-bar, and get the close button in position */
+#navigator-toolbox {
+  padding-top: 8px;
+  & #TabsToolbar {
+    position: absolute;
+    height: 20px;
+    left: 0;
+    right: 0;
+    & .toolbar-items {
+      display: none;
+    }
+    & .titlebar-buttonbox-container {
+      right: 0;
+      position: absolute;
+      top: 0;
+      transform: translateY(-9px);
+    }
   }
+  & #nav-bar {
+    margin-right: 140px;
+    border-top: 0 !important;
+  }
+}
+
+.private-browsing-indicator-icon {
+  transform: translate(7px, 9px);
+}
+.private-browsing-indicator-label {
+  display: none !important;
 }
