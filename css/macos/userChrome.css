@@ -16,7 +16,7 @@ body {
 
 #tabbrowser-tabs[orient="vertical"]:has(> #tabbrowser-arrowscrollbox[overflowing="true"]) {
   border-bottom: none !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 8px !important;
 }
 
 #tabbrowser-tabbox {
@@ -26,11 +26,11 @@ body {
 }
 
 #browser {
-  padding: 6px 10px 10px 10px;
+  padding: 3px 8px 8px 8px;
 }
 
 #navigator-toolbox {
-  padding-top: 8px;
+  padding-top: 4px;
   border: 0 !important;
 }
 
@@ -57,17 +57,17 @@ body {
 }
 
 .browserContainer browser {
-  border-radius: 10px !important;
+  border-radius: 6px !important;
   box-shadow: 0px 0 6px 1px rgba(0, 0, 0, 0.25);
   border: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 #sidebar-box {
-  border-radius: 10px !important;
+  border-radius: 6px !important;
 }
 
 browser#sidebar {
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 8px 8px;
 }
 
 #sidebar,
@@ -83,7 +83,7 @@ browser#sidebar {
 /* Firefox's new vertical tabs stuff */
 #sidebar-main {
   &:not([hidden]) {
-    margin-left: -10px;
+    margin-left: -8px;
   }
 
   tab.tabbrowser-tab>stack {
@@ -105,18 +105,18 @@ sidebar-main,
 findbar {
   background: transparent !important;
   border: 0 !important;
-  padding-block: 10px !important;
+  padding-block: 8px !important;
   padding-block-end: 0 !important;
 }
 
 .devtools-horizontal-splitter {
-  height: 10px !important;
+  height: 8px !important;
   background: transparent !important;
   margin: 0 !important;
 }
 
 .sidebar-splitter.shopping-sidebar-splitter {
-  width: 10px !important;
+  width: 8px !important;
   margin: 0 !important;
   border: 0 !important;
   border-inline-width: 0 !important;
@@ -127,7 +127,7 @@ shopping-sidebar {
   border-inline-start: 0 !important;
 
   & browser.shopping-sidebar {
-    border-radius: 10px !important;
+    border-radius: 6px !important;
   }
 }
 
