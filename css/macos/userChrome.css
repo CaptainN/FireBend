@@ -52,8 +52,8 @@ body {
   height: 0;
 }
 
-#nav-bar-customization-target {
-  padding-left: 65px;
+.titlebar-spacer {
+  display: none;
 }
 
 .browserContainer browser {
