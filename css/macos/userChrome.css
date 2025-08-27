@@ -20,9 +20,7 @@ body {
 }
 
 #tabbrowser-tabbox {
-  @media (-moz-bool-pref: "sidebar.revamp") {
-    outline: none !important;
-  }
+  outline: none !important;
 }
 
 #browser {
